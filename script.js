@@ -4,6 +4,7 @@ const fireworksLeft = document.getElementById('fireworksLeft');
 const fireworksRight = document.getElementById('fireworksRight');
 
 function createFirework() {
+  console.log('createFirework');
   const firework = document.createElement('div');
   firework.classList.add('firework');
   const particle = document.createElement('span');
@@ -13,6 +14,7 @@ function createFirework() {
 }
 
 function launchFirework(position) {
+  console.log('launchFirework');
   const firework = createFirework();
   firework.style.left = `${position}%`;
   if (position === 0) {
@@ -26,6 +28,7 @@ function launchFirework(position) {
 }
 
 playButton.addEventListener('click', () => {
+  console.log('button clicked');
   soundEffect.play();
   launchFirework(0);
   launchFirework(100);
